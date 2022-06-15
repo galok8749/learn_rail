@@ -11,6 +11,7 @@ class RootController < ApplicationController
 
 	def contact
 		# puts "CONTACT PAGE IN SERVER"
+		# redirect_to("/about")
 		render "contact"
 	end
 
@@ -23,4 +24,8 @@ class RootController < ApplicationController
 		render json: @response
 	end
 
+	def user 
+		puts params
+		render json: params
+	end
 end
